@@ -77,3 +77,14 @@ Route::post('/stok', 'StokController@store');
 Route::get('/stok/edit/{id}', 'StokController@edit');
 Route::put('/stok/update/{id}', 'StokController@update');
 Route::get('/stok/hapus/{id}', 'StokController@delete');
+
+//Routing untuk menu Dashboard Produksi
+Route::get('/produksi', 'DashboardproduksiController@home');
+
+Route::get('/masterdata', 'MasterdataController@index');
+Route::get('/masterdata/create','MasterdataController@create');
+Route::post('/masterdata', 'MasterdataController@store');
+Route::get('/masterdata/edit/{id}', 'MasterdataController@edit');
+Route::put('/masterdata/update/{id}', 'MasterdataController@update');
+Route::get('/masterdata/hapus/{id}', 'MasterdataController@delete');
+Route::get('/masterdata/cetaklaporan', 'MasterdataController@cetak_pdf');
